@@ -1,0 +1,121 @@
+new 
+top (Week, mont, year, all time)
+controversial 
+------------------------------------------------
+q-category:
+	catid
+	name
+	keywords
+
+questionvqcatagory
+	qid foreignkey distinct keypair 
+	catid foreignkey
+
+qvotes
+	uid unique key
+	qid unique key
+	int -1 0 1
+
+
+avotes
+	uid
+	aid
+
+Questions:
+	autointid qidw
+	qtext
+	explaintext
+	exampletext
+	uid foreignkey
+	time
+
+QvsA
+	aidunique key just aid
+	qid
+
+Answers:
+	foreignkey qid
+	autoincrement id?
+	Text
+	time
+	
+--------------------------------------------------
+
+
+Forum
+(question discussion Catagories)
+	posts
+		pid
+		posttitle
+		posttext
+		foreignkey uid
+		time
+		
+	reply
+		rid auto inc
+		replytext
+		uid foreignkey
+		pid foreignkey
+		time
+
+	forumpostvsforumreply
+		pid uniquekey
+		rid uniquekey
+
+	cata
+
+	catavspid
+
+-----------------------------------------------
+Blog
+	post
+		autoint id
+		content
+		picture
+		title
+		time
+	comment
+		autoint id
+		uid foreignkey
+		content
+		time
+	postvscomment
+		pid uniquekey
+		cid uniquekey
+-------------------------------------------------
+FAQ
+	question
+		qtext
+		autointid
+		answer text
+		author forignkey
+		
+		
+------------------------------------------------
+Contact
+	look at previous app
+------------------------------------------------
+Login
+	username
+	avatar
+	salt
+	password
+	email
+	phone
+	userid
+	mailing list y/n
+	firstname 
+	lastname
+	date of birth
+	country
+	password hint
+	password hint response
+	user occupation
+	user join date
+	user group
+	user status
+	signoff
+------------------------------------------------------	
+Search
+
+Advanced search
