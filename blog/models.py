@@ -8,7 +8,7 @@ class Post(models.Model):
     picture =           models.ImageField()
     created =           models.TimeField(auto_now_add=True)
     modified =          models.TimeField(auto_now=True)
-    userid =            models.ForeignKey(User)
+    userid =            models.ForeignKey(users.User)
 
     class Meta():
         ordering = ('created',)
@@ -20,8 +20,8 @@ class Comment(models.Model)
     content =           models.TextField() 
     created =           models.TimeField(auto_now_add=True)
     modified =          models.TimeField(auto_now=True)
-    userid =            models.ForeignKey(User)
-    postid =            models.ForeignKey(BPosts)
+    userid =            models.ForeignKey(users.User)
+    postid =            models.ForeignKey(blog.Post)
 
     class Meta():
         ordering = ('created',)

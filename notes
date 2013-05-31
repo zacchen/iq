@@ -1,0 +1,9 @@
+http://github.com/mpasternak/django-monitio
+Live messaging for users.
+
+http://eflorenzano.com/blog/2008/07/13/first-two-django-screencasts/
+pagination
+
+
+verbose_name = 'Blog Post'
+        verbose_name = 'Blog Posts'
