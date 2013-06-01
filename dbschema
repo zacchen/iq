@@ -107,7 +107,7 @@ Login
 	password
 	email
 	phone
-	userid
+dd	userid
 	mailing list y/n
 	firstname 
 	lastname
@@ -120,6 +120,11 @@ Login
 	user group
 	user status
 	signoff
+    activation key
+    activation sent
+    activation returned
+    last active
+
 ------------------------------------------------------	
 Search
 
