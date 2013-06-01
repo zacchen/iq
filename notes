@@ -7,3 +7,35 @@ pagination
 
 verbose_name = 'Blog Post'
         verbose_name = 'Blog Posts'
+
+
+FOR INSTALL:
+installed apps south
+python manage syncdb
+#add other installed apps
+#use south
+# python ./manage.py convert_to_south users
+#./manage.py migrate users 0001 --fake
+#for ownapp in installed apps:
+#    python manage.py schemamigration appname --initial
+#./manage.py migrate --al
+
+
+
+TO ADD FIELDS TO A USER:
+you have make a model for the user profile.
+
+like this:
+
+ class UserProfile(models.Model):  
+     user = models.ForeignKey(User, unique=True)
+     location = models.CharField(max_length=140)  
+     gender = models.CharField(max_length=140)  
+     employer = models.ForeignKey(Employer)
+     profile_picture = models.ImageField(upload_to='thumbpath', blank=True)
+
+    def __unicode__(self):
+        return u'Profile of user: %s' % self.user.username
+then configure in settings.py
+
+    AUTH_PROFILE_MODULE = 'accounts.UserProfile'
