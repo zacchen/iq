@@ -128,7 +128,7 @@ INSTALLED_APPS = (
     'blog',
     'faq',
     'forum',
-    'questions',
+    'quest',
     'about',
 )
 
