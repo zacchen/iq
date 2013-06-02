@@ -27,7 +27,7 @@ class IQUser(AbstractUser):
     Our new profile adds the below:
     """ 
     title =             models.CharField(max_length=50)
-    avatar =            models.ImageField(upload_to='static/user_avatars')
+    avatar =            models.ImageField(upload_to='justdifferent/user_avatars')
     phone =             models.IntegerField(null=True)
     mailing =           models.BooleanField(default=False)
     dob =               models.DateField(null=True)

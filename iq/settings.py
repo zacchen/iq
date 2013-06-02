@@ -126,6 +126,7 @@ INSTALLED_APPS = (
     'justdifferent',
     'south',
     'blog',
+    'faq',
 )
 
 # A sample logging configuration. The only tangible logging
