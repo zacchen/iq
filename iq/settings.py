@@ -127,6 +127,9 @@ INSTALLED_APPS = (
     'south',
     'blog',
     'faq',
+    'forum',
+    'questions',
+    'about',
 )
 
 # A sample logging configuration. The only tangible logging

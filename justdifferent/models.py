@@ -5,13 +5,15 @@ from django.contrib.auth.models import AbstractUser
 class IQUser(AbstractUser):
     """
     !!! To use this guy we need to put:
-        AUTH_USER_MODEL = 'users.IQUser'    
+        AUTH_USER_MODEL = 'justdifferent.IQUser'
     !!! in our settings.py
 
     Above is the (current) preferred method for extending the Django user 
     model. We inherit from AbstractUser (as opposed to AbstractBaseUser)
     because we don't hate Django users we just think they should be 
     bigger. And that's fine.
+    The previous method was to attach a profile with USER_PROFILE_METHOD
+    but this was deprecated in 1.5
     
     We let the Django user model provide the following attributes:
         username, first_name, last_name, email, password, groups, 
@@ -41,6 +43,6 @@ class IQUser(AbstractUser):
    
     class Meta():
         verbose_name = 'IQUser'
-        verbose_name_plural = 'IQUser'
+        verbose_name_plural = 'IQUsers'
         
     

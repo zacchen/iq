@@ -1,5 +1,5 @@
 from django.contrib import admin
-from blog.faq import FAQ
+from faq.models import FAQ
 
 admin.site.register(FAQ)
 
